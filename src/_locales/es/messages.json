@@ -1,0 +1,12 @@
+{
+    "appName": {
+        "message": "YouTube Oscuro"
+    },
+
+    "appDescription": {
+        "message": "Extensión para hacer oscuro la pantalla"
+    },
+    "enabledDarkModeText":{
+        "message": "HACER NEGRO"
+    }
+}

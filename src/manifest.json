@@ -1,0 +1,45 @@
+{
+    "name": "__MSG_appName__",
+    "version": "1.0.0",
+    "description": "__MSG_appDescription__",
+    "default_locale": "es",
+    "manifest_version": 2,
+    "background": {
+        "scripts": [
+            "background.js",
+            "backgroundMessaging.js"
+        ],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "js": [
+                "content.js",
+                "contentMessaging.js",
+                "contentRequests.js"
+            ],
+            "matches": [
+                "https://*.youtube.com/*"
+            ],
+            "exclude_matches": [
+                "https://*.youtube.com/watch*"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "permissions": [
+        "bookmarks",
+        "storage",
+        "tabs",
+        "https://api.github.com/"
+    ],
+    "icons": {
+        "16": "badge_on_example.png",
+        "48": "badge_on_example.png",
+        "128": "badge_on_example.png"
+    },
+    "browser_action": {
+        "default_title": "Created by Tomas, enjoy! :)",
+        "default_popup": "popup.html"
+    }
+}
